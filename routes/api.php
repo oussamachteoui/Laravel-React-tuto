@@ -23,3 +23,6 @@ Route::get('/posts',             'PostController@index');
 Route::get('/post/{id}',         'PostController@show');
 Route::delete('/posts/{id}/delete', 'PostController@delete');
 Route::get('/posts/{id}/edit',     'PostController@edit');
+
+//CATEGORIES ROUTES
+Route::get('/categories' , 'CategoryController@index');
