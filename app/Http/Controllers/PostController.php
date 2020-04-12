@@ -12,7 +12,10 @@ class PostController extends Controller
         $postTable =  DB::table('posts')->select('name', 'description','created_at')->get();
         return response()->json($postTable);
     }
+    public function getPostByCategories($id){
 
+        dd($id);
+    }
     public function edit(){
 
     }

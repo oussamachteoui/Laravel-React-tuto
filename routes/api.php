@@ -19,10 +19,16 @@ use Illuminate\Support\Facades\Route;
 // });
 
 //POST ROUTES
-Route::get('/posts',             'PostController@index');
-Route::get('/post/{id}',         'PostController@show');
-Route::delete('/posts/{id}/delete', 'PostController@delete');
-Route::get('/posts/{id}/edit',     'PostController@edit');
+Route::get('/posts',                     'PostController@index');
+// Route::get('/posts/category/{$id}',       'PostController@getPostByCategories');
+// Route::get('/post/{id}',         'PostController@show');
+// Route::delete('/posts/{id}/delete', 'PostController@delete');
+// Route::get('/posts/{id}/edit',     'PostController@edit');
 
 //CATEGORIES ROUTES
 Route::get('/categories' , 'CategoryController@index');
+
+Route::get('/categories/{id}' , 'CategoryController@showById');
+Route::get('/categories/{id}/posts' , 'CategoryController@showPosts');
+
+
